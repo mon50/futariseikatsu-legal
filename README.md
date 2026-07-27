@@ -46,5 +46,5 @@ legal/<doc>/<lang>/index.html  各文書（doc: privacy | terms | tokushoho, lan
 2. ページ上部の「最終更新日」と、末尾の「改訂履歴」に変更内容を追記する。
 3. コミットして push する（GitHub Pages が自動で反映する）。
 
-> **注意**: 公開前に各文書内の `<<CONTACT_EMAIL>>` を実際の連絡先メールアドレスへ置換すること。
+> 連絡先メールアドレスは `support@nichijo-update.com`（2026-07-28 確定・置換済み。全プロダクト共通）。
 > 現時点では全ページでプレースホルダのままにしてある。
