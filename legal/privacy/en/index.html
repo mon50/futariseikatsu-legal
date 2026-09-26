@@ -20,7 +20,7 @@
       <header class="head">
         <div>
           <h1>FutariSeikatsu Privacy Policy</h1>
-          <div class="sub">Last updated: 2026-07-27 ・ Effective: 2026-07-27</div>
+          <div class="sub">Last updated: 2026-09-26 ・ Effective: 2026-10-03</div>
         </div>
         <nav class="lang">
           <a href="../ja/">ja</a>|
@@ -33,8 +33,9 @@
         about its users (the "User"). The App is developed and operated by an individual ("we" / "us").
       </p>
       <p>
-        The App lets two people create "topics to discuss," write down their own views, and record the
-        decisions they reach. Because of this design, what you enter is
+        The App lets two people turn the things they want to decide into "themes," write down their own
+        views, and record and organize the decisions they reach. The App has no messaging (chat), comment,
+        or image-attachment features. Because of this design, what you enter is
         <strong>shared with the partner you are paired with</strong> and is
         <strong>stored on cloud infrastructure operated by our processors</strong> so that both devices stay
         in sync. See §3 and §4 for details.
@@ -55,8 +56,8 @@
           private relay address issued by Apple, and your actual email address is not disclosed to us.
         </li>
         <li>
-          <strong>Profile</strong>: the nickname and avatar type you set inside the App. We never ask for
-          your legal name; you may set any nickname you like.
+          <strong>Profile</strong>: the nickname (up to 12 characters) and avatar type you set inside the
+          App. We never ask for your legal name; you may set any nickname you like.
         </li>
       </ul>
 
@@ -66,53 +67,71 @@
       </ul>
 
       <h3>1.3 Content You Create</h3>
-      <p>The following content you enter is stored on the server (see §3.2):</p>
+      <p>The following content you enter is stored on the server (see §3):</p>
       <ul>
-        <li>Topics (events): title, chosen icon, template, and progress status.</li>
-        <li>Discussion fields: name, type, and options.</li>
-        <li>The opinions, preferences, and stances you enter for each field.</li>
-        <li>Decisions: the decided value, who decided it, and the method used.</li>
-        <li>Comments, reactions, and replies to comments.</li>
-        <li>
-          Images you optionally attach as a reaction. The photo library is accessed only when you use this
-          feature, and only the image you select is handled. Attached images are stored on the server and
-          are visible to your partner.
-        </li>
+        <li>Themes: title (up to 30 characters), chosen icon, template, due date, and progress status.</li>
+        <li>Items within a theme: name (up to 20 characters), type, and options (up to 20 characters each).</li>
+        <li>The opinions you enter for each item (up to 100 characters).</li>
+        <li>Decisions: what was decided (up to 100 characters), who decided it, and the method used.</li>
       </ul>
       <p>
-        This content may include descriptions of your and your partner's life and future plans. We do not
-        restrict what you may enter, but we recommend that you avoid entering sensitive information you do
-        not need to record (such as beliefs, medical history, or criminal records).
+        Every free-text field is limited to the lengths above. This content may include descriptions of your
+        and your partner's life and future plans. We do not restrict what you may enter, but we recommend
+        that you avoid entering sensitive information you do not need to record (such as beliefs, medical
+        history, or criminal records).
       </p>
 
       <h3>1.4 Purchase and Subscription Information</h3>
       <p>
         If you purchase the "Premium" paid plan, the payment itself is processed by Apple's in-app purchase
-        system (StoreKit). We store your purchase status (the identifier of the purchased plan, whether the
-        subscription is active, and its expiry) on the server. This is necessary so that when one member of
-        a couple subscribes, the other can also use the paid features; your purchase status is therefore
-        also readable by your partner. We do not collect or retain your credit card number or any other
-        payment details.
+        system (StoreKit). Our server receives the transaction information signed by Apple, verifies the
+        signature, and stores the following:
+      </p>
+      <ul>
+        <li>The identifier of the purchased plan (product ID).</li>
+        <li>The subscription status (active, expired, or revoked, e.g. after a refund) and its expiry date.</li>
+        <li>The original transaction ID issued by Apple.</li>
+        <li>The transaction environment (production or sandbox) and the date Apple signed the transaction information.</li>
+      </ul>
+      <p>
+        Our server also receives App Store Server Notifications (V2) from Apple and applies changes such as
+        renewals, expirations, and refunds to the status above. This processing is necessary to confirm that
+        a purchase is genuine and so that when one member of a couple subscribes, the other can also use the
+        paid features. Your partner can see whether the paid plan is active. We do not collect or retain your
+        credit card number or any other payment details.
       </p>
 
       <h3>1.5 Push Notification Information</h3>
       <p>
         If you allow push notifications, we store the device token issued by Apple Push Notification service
-        (APNs) on the server. It is used solely to notify you of your partner's entries and decisions. You
-        can disable notifications at any time in your device settings.
+        (APNs) on the server. It is used solely to notify you of your partner's activity, such as when your
+        partner writes an opinion.
+      </p>
+      <p>
+        Notifications contain only fixed template text, such as "Your partner wrote an opinion." They never
+        include information you entered, such as nicknames, theme names, item names, or the content of
+        opinions. Notifications are sent from our server through Apple's APNs to your device. You can stop
+        notifications from being shown at any time in your device settings (see §5.1 for how device tokens
+        are handled).
       </p>
 
       <h3>1.6 Information Stored On Your Device</h3>
       <ul>
         <li>A local cache (an on-device database) used for offline display and synchronization.</li>
         <li>App preferences such as display language, sign-in state, onboarding-completed flag, and notification settings.</li>
+        <li>
+          If you export a theme as a PDF or image, the file is created on your device and is not sent to our
+          server. The App asks for "add only" access to your photo library only when you save an exported
+          image there. If you send an exported file to another app or service through the share sheet, its
+          handling from then on is governed by that service's terms.
+        </li>
       </ul>
 
       <h3>1.7 Information We Do Not Collect</h3>
       <ul>
         <li>Advertising identifiers (IDFA / Advertising ID). The App shows no advertising.</li>
-        <li>Location, contacts, microphone, or camera access. (The photo library is accessed only in the case described in §1.3.)</li>
-        <li>Crash reports or analytics SDKs (Firebase / Crashlytics / Google Analytics, etc.).</li>
+        <li>Location, contacts, microphone, or camera access. The App never reads photos in your photo library (apart from the "add only" access described in §1.6).</li>
+        <li>Crash reports or analytics (Firebase / Crashlytics / Google Analytics, etc.). The App does not include any third-party analytics, advertising, or crash-reporting SDK.</li>
         <li>The App performs no generative-AI processing and never sends your input to an AI service.</li>
         <li>Postal address, phone number, date of birth, gender, or credit card information.</li>
       </ul>
@@ -121,14 +140,19 @@
       <ul>
         <li>To authenticate you and maintain your account.</li>
         <li>To share, synchronize, and deliver real-time updates of content between the two of you.</li>
-        <li>To determine paid-plan entitlement for both members of a couple.</li>
+        <li>To verify purchases and determine paid-plan entitlement for both members of a couple.</li>
         <li>To send push notifications about your partner's activity.</li>
         <li>To prevent abuse and to respond to your inquiries.</li>
       </ul>
       <p>
         We do not use any information for machine-learning training, advertising, profiling, sale to third
-        parties, or any other secondary purpose. We do not read the content you create, except where
-        required to respond to a lawful disclosure request or where you ask us to investigate a problem.
+        parties, or any other secondary purpose.
+      </p>
+      <p>
+        As the database administrator, we are technically able to access information stored on the server.
+        However, we view your content only (1) to respond to your inquiries, (2) to respond to a disclosure
+        request based on law, or (3) to investigate a problem at your request. In each case we view no more
+        than is necessary.
       </p>
       <p>
         <strong>Legal basis (GDPR)</strong>: the processing above is necessary for the performance of our
@@ -146,15 +170,19 @@
         <li>
           <strong>Supabase, Inc.</strong> (United States)
           <ul>
-            <li>Purpose: user authentication (Supabase Auth), database, real-time synchronization, and image storage.</li>
+            <li>Purpose: user authentication (Supabase Auth), database (PostgreSQL), real-time synchronization, and server-side processing (Edge Functions: purchase verification, sending notifications, account deletion, etc.).</li>
             <li>Information sent: all of the information described in §1.1 through §1.5.</li>
-            <li>We operate our database in a Supabase cloud region (in the United States or a comparable region).</li>
+            <li>
+              Storage location: your information is stored on cloud infrastructure provided by Supabase, Inc.
+              The storage region is Japan (Tokyo).
+            </li>
           </ul>
         </li>
         <li>
           <strong>Apple Inc.</strong> (United States)
           <ul>
-            <li>Purpose: authentication via Sign in with Apple, in-app purchase (payment and subscription management), and push notification delivery (APNs).</li>
+            <li>Purpose: authentication via Sign in with Apple, in-app purchase (payment, subscription management, and notices of changes in purchase status), and push notification delivery (APNs).</li>
+            <li>Information sent: information required for authentication, device tokens, and the fixed-text notifications described in §1.5.</li>
             <li>Apple's handling of information is governed by Apple's privacy policy.</li>
           </ul>
         </li>
@@ -163,12 +191,30 @@
         We do not sell, rent, or share your information with any other third party (advertisers, data
         brokers, or external companies).
       </p>
-      <h3>3.2 International Transfers</h3>
+
+      <h3>3.2 Provision to Third Parties in Foreign Countries</h3>
       <p>
-        The processors above are located in the United States, and your information is stored on servers
-        outside Japan. Supabase and Apple each apply safeguards for personal information under their
-        respective privacy policies and data processing terms, including Standard Contractual Clauses.
-        Please refer to their privacy policies for details.
+        Both processors in §3.1 are companies based in the United States. As required by the Act on the
+        Protection of Personal Information of Japan, we provide the following information.
+      </p>
+      <ul>
+        <li><strong>Country where the recipients are located</strong>: the United States of America.</li>
+        <li>
+          <strong>That country's system for protecting personal information</strong>: the United States has
+          no comprehensive federal law on personal information protection; personal information is protected
+          by Section 5 of the Federal Trade Commission Act, sector-specific federal laws, and state laws
+          (such as the California Consumer Privacy Act). For details, see the survey of foreign personal
+          information protection systems published by Japan's Personal Information Protection Commission.
+        </li>
+        <li>
+          <strong>Measures taken by the recipients</strong>: Supabase, Inc. takes the measures necessary to
+          protect personal information under its published privacy policy and data processing addendum (DPA).
+          Apple Inc. takes the measures necessary to protect personal information under its privacy policy.
+        </li>
+      </ul>
+      <p>
+        Server-side information is stored in the location described in §3.1. Because the processors are US
+        companies, the information may be subject to disclosure requests under US law.
       </p>
 
       <h2>4. Sharing With Your Partner</h2>
@@ -178,30 +224,51 @@
       </p>
       <ul>
         <li>Your nickname and avatar type.</li>
-        <li>The topics, fields, opinions, decisions, comments, and attached images you create or enter (everything in §1.3).</li>
-        <li>Your paid-plan status (active or not — this does not include payment details or amounts).</li>
+        <li>The themes, items, opinions, and decisions you create or enter (everything in §1.3).</li>
+        <li>Whether your paid plan is active (this does not include payment details or amounts).</li>
       </ul>
       <p>
-        Your partner can edit and delete shared topics and fields. In contrast, the opinions and comments
-        you post can, as a rule, only be deleted by you.
+        Your partner can edit and delete shared themes and items. In contrast, the opinions you write can,
+        as a rule, only be deleted by you.
       </p>
       <p>
         We cannot take responsibility for how information shared between the two of you is subsequently
-        used. <strong>Do not enter anything you do not want to share.</strong> If you end the pairing,
-        information created afterwards is no longer shared with the other person, but we cannot retrieve
-        information that was already displayed on or saved to their device.
+        used. <strong>Do not enter anything you do not want to share.</strong>
+      </p>
+      <p>
+        When either of you uses "Disconnect" in the App, the shared couple and all of its themes, items,
+        opinions, and decisions are deleted from the server, and both of you start fresh. We cannot restore
+        deleted content. However, we cannot retrieve information stored on your partner's device or in other
+        services before unpairing, such as PDFs or images your partner exported.
       </p>
 
       <h2>5. Storage Locations and Retention</h2>
       <h3>5.1 Server Side</h3>
       <ul>
-        <li>Account information, pairing information, and the content you create are retained until you delete your account.</li>
+        <li>Account information and your profile are retained until you delete your account.</li>
+        <li>A couple and its themes, items, opinions, and decisions are retained until the pairing is ended or the account of the member who created the couple is deleted (see §4 and §7).</li>
         <li>We do not unilaterally set a retention period after which data is deleted.</li>
-        <li>Device tokens are deleted when you turn off notifications or delete your account.</li>
+        <li>
+          Device tokens are deleted when you log out or delete your account. If you turn off notifications in
+          your device settings, the device token remains on the server, but notifications are not shown on
+          your device.
+        </li>
+        <li>
+          Deleted data may remain for a limited period in copies that our infrastructure provider (Supabase)
+          keeps for disaster recovery, and is erased after that period. We do not retrieve or use data from
+          those copies.
+        </li>
       </ul>
       <h3>5.2 On-Device Data</h3>
       <ul>
-        <li>The local cache and app preferences are removed from your device when you sign out or uninstall the App.</li>
+        <li>
+          The local cache and app preferences remain on your device after you log out, so that they can be
+          used when you log in again with the same account.
+        </li>
+        <li>
+          On-device data is removed when you delete your account, log in with a different account, or
+          uninstall the App. Please take care if you share your device with others.
+        </li>
       </ul>
 
       <h2>6. Security</h2>
@@ -220,8 +287,18 @@
         </li>
         <li>
           <strong>Least privilege</strong>: operations requiring administrative rights (such as account
-          deletion) run only through a restricted server-side function and cannot be invoked directly by the
-          App.
+          deletion and updating subscription status) run only through restricted server-side functions and
+          cannot be invoked directly by the App. Subscription status is updated only from Apple-signed
+          transaction information whose signature we have verified and from notifications sent by Apple.
+        </li>
+        <li>
+          <strong>Administrator access</strong>: we view your content as database administrator only in the
+          cases described in §2.
+        </li>
+        <li>
+          <strong>Understanding the external environment</strong>: we take security measures with an
+          understanding of the personal information protection systems of the country where our processors
+          are based (the United States) and of the storage location (§3.1).
         </li>
       </ul>
 
@@ -231,14 +308,21 @@
         <li><strong>Access</strong>: you can review the data you created and your profile from within the App. You may also request disclosure of the personal information we hold using the contact in §9.</li>
         <li>
           <strong>Deletion</strong>: you can delete your account at any time via "Settings → Account
-          Management." Deletion removes, from the server, your profile, subscription status, device tokens,
-          the opinions and comments you posted, and any couple you created together with its topics, fields,
-          and decisions; your authentication record (the account itself) is deleted as well. If you had
-          joined a couple created by your partner, you simply leave that couple and their data remains
-          theirs. This action cannot be undone.
+          management." Deletion removes, from the server, your profile, subscription status, device tokens,
+          and the opinions you wrote; your authentication record (the account itself) is deleted as well.
+          If you created the couple, that couple and all of its themes, items, opinions, and decisions are
+          also deleted, and your partner is given a fresh, empty space. If you had joined a couple created by
+          your partner, you leave that couple, and its themes and decisions remain with your partner. We also
+          revoke the App's Sign in with Apple link on Apple's side and remove the data on your device. This
+          action cannot be undone. Deleting your account does not cancel your subscription automatically;
+          please cancel it from your App Store account settings.
         </li>
         <li><strong>Correction</strong>: you can edit your profile (such as your nickname) and the content you entered from within the App.</li>
-        <li><strong>Restriction / objection</strong>: you can stop push notifications in your device settings, and stop sharing with your partner by ending the pairing.</li>
+        <li>
+          <strong>Restriction / objection</strong>: you can stop notifications from being shown in your device
+          settings. You can stop sharing with your partner by unpairing, but doing so deletes all content the
+          two of you shared (see §4).
+        </li>
         <li><strong>Complaints</strong>: contact us using the address in §9 with any complaint regarding this Policy or our handling of your information.</li>
         <li><strong>Regulatory complaints</strong>: EU / UK users may lodge a complaint with their local data protection authority; users in Japan may contact the Personal Information Protection Commission.</li>
       </ul>
@@ -268,6 +352,13 @@
       <footer class="revisions">
         <strong>Revision history</strong>
         <ul>
+          <li>
+            2026-09-26: Removed descriptions of the discontinued comment, reaction, and image-attachment
+            features. Revised the descriptions of purchase information and notifications from Apple, push
+            notification content and delivery, on-device data after logging out, when device tokens are
+            deleted, data handling on unpairing and account deletion, when we view content, and the storage
+            location and provision to third parties in foreign countries, to match how the App actually works.
+          </li>
           <li>2026-07-27: Initial publication.</li>
         </ul>
       </footer>
