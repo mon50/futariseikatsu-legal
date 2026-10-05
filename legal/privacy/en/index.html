@@ -20,7 +20,7 @@
       <header class="head">
         <div>
           <h1>FutariSeikatsu Privacy Policy</h1>
-          <div class="sub">Last updated: 2026-09-26 ・ Effective: 2026-10-03</div>
+          <div class="sub">Last updated: 2026-10-06 ・ Effective: 2026-10-06</div>
         </div>
         <nav class="lang">
           <a href="../ja/">ja</a>|
@@ -30,7 +30,7 @@
 
       <p>
         This Privacy Policy (the "Policy") describes how FutariSeikatsu (the "App") handles information
-        about its users (the "User"). The App is developed and operated by an individual ("we" / "us").
+        about its users (the "User"). The App is developed and operated by Sota Sugiyama (an individual; handle: mon50) ("we" / "us").
       </p>
       <p>
         The App lets two people turn the things they want to decide into "themes," write down their own
@@ -127,7 +127,14 @@
         </li>
       </ul>
 
-      <h3>1.7 Information We Do Not Collect</h3>
+      <h3>1.7 Records Kept to Prevent Abuse and Handle Outages</h3>
+      <ul>
+        <li>Records of failed invite-code entries (your identifier and the time). Used to count attempts so that invite codes cannot be guessed by brute force. Records older than one hour are deleted the next time you enter a code or when you delete your account.</li>
+        <li>Records of sent notifications (the sender's identifier, the type of notification, and the time). Used to prevent sending too many notifications, and deleted after one hour.</li>
+        <li>Access logs kept by our infrastructure provider (Supabase) for troubleshooting and security (IP address, time, and type of request). Their retention follows Supabase's rules.</li>
+      </ul>
+
+      <h3>1.8 Information We Do Not Collect</h3>
       <ul>
         <li>Advertising identifiers (IDFA / Advertising ID). The App shows no advertising.</li>
         <li>Location, contacts, microphone, or camera access. The App never reads photos in your photo library (apart from the "add only" access described in §1.6).</li>
@@ -150,9 +157,13 @@
       </p>
       <p>
         As the database administrator, we are technically able to access information stored on the server.
-        However, we view your content only (1) to respond to your inquiries, (2) to respond to a disclosure
-        request based on law, or (3) to investigate a problem at your request. In each case we view no more
-        than is necessary.
+        However, we handle your content with due regard to the secrecy of communications (Article 4 of the
+        Telecommunications Business Act of Japan). We view your content only (1) with the consent of the user
+        who contacted us, when needed to respond to that inquiry, (2) when legally required, such as under a
+        warrant issued by a judge, or (3) when indispensable to investigate the cause of an outage or abuse.
+        In each case we view no more than is necessary and record when and why we viewed it. As a rule, we do
+        not comply with requests that do not carry a legal obligation, such as informal inquiries from
+        investigative authorities.
       </p>
       <p>
         <strong>Legal basis (GDPR)</strong>: the processing above is necessary for the performance of our
@@ -163,8 +174,9 @@
       <h2>3. Third-Party Processors and International Transfers</h2>
       <h3>3.1 Processors</h3>
       <p>
-        We engage the following third parties as processors. They act on our behalf and do not receive your
-        information as independent recipients.
+        We use the following external companies to provide the App. Supabase, Inc. processes information on
+        our behalf. Apple Inc. provides Sign in with Apple, in-app purchases, and push notifications itself,
+        under its own terms of service and privacy policy.
       </p>
       <ul>
         <li>
@@ -216,6 +228,10 @@
         Server-side information is stored in the location described in §3.1. Because the processors are US
         companies, the information may be subject to disclosure requests under US law.
       </p>
+      <p>
+        By agreeing to this Policy when you log in to the App, you consent to the provision of your information
+        to the third parties in a foreign country described above.
+      </p>
 
       <h2>4. Sharing With Your Partner</h2>
       <p>
@@ -262,12 +278,14 @@
       <h3>5.2 On-Device Data</h3>
       <ul>
         <li>
-          The local cache and app preferences remain on your device after you log out, so that they can be
-          used when you log in again with the same account.
+          The local cache is removed from your device when you log out, delete your account, log in with a
+          different account, or uninstall the App. Content already sent to the server comes back when you log
+          in again with the same account. Changes that have not yet been sent are lost when you log out (the
+          App warns you before logging out in that case).
         </li>
         <li>
-          On-device data is removed when you delete your account, log in with a different account, or
-          uninstall the App. Please take care if you share your device with others.
+          Some app preferences, such as the display language, remain on your device after you log out. They
+          are removed when you uninstall the App.
         </li>
       </ul>
 
@@ -305,7 +323,7 @@
       <h2>7. Your Rights</h2>
       <p>You have the following rights with respect to your information:</p>
       <ul>
-        <li><strong>Access</strong>: you can review the data you created and your profile from within the App. You may also request disclosure of the personal information we hold using the contact in §9.</li>
+        <li><strong>Access</strong>: you can review the data you created and your profile from within the App. You may also request disclosure of the personal information we hold using the contact in §9 (see the procedure below).</li>
         <li>
           <strong>Deletion</strong>: you can delete your account at any time via "Settings → Account
           management." Deletion removes, from the server, your profile, subscription status, device tokens,
@@ -326,6 +344,21 @@
         <li><strong>Complaints</strong>: contact us using the address in §9 with any complaint regarding this Policy or our handling of your information.</li>
         <li><strong>Regulatory complaints</strong>: EU / UK users may lodge a complaint with their local data protection authority; users in Japan may contact the Personal Information Protection Commission.</li>
       </ul>
+      <h3>Procedure for Disclosure and Other Requests</h3>
+      <p>
+        To request notification of the purpose of use, disclosure (including records of provision to third
+        parties), correction, addition, or deletion, suspension of use or erasure, or suspension of provision to
+        third parties of your retained personal data, email the address in §9 with the following three items:
+      </p>
+      <ul>
+        <li>What you are requesting (for example, disclosure).</li>
+        <li>Your user ID, shown in "Settings → Account management" in the App.</li>
+        <li>The email address of the Apple Account you use with the App (or that you chose "Hide My Email").</li>
+      </ul>
+      <p>
+        We will confirm that you are the person concerned by checking these against our records, and may ask for
+        additional confirmation if needed. There is no fee. We will reply by email without delay.
+      </p>
       <p>
         <strong>Do-not-sell declaration (CCPA)</strong>: we do not sell the personal information of any
         User, including California residents.
@@ -345,13 +378,20 @@
       <h2>9. Contact</h2>
       <p>For questions about this Policy or about how we handle your information, please contact:</p>
       <ul>
-        <li>Operator: mon50 (individual)</li>
+        <li>Operator: Sota Sugiyama (individual; handle: mon50)</li>
+        <li>Address: provided without delay upon request.</li>
         <li>Email: <code>support@nichijo-update.com</code></li>
       </ul>
 
       <footer class="revisions">
         <strong>Revision history</strong>
         <ul>
+          <li>
+            2026-10-06: Added or revised the operator's name and how the address is provided, records kept to
+            prevent abuse and handle outages, when we view content (secrecy of communications), the roles of
+            external companies, consent to provision to third parties in a foreign country, on-device data after
+            logging out, and the procedure for disclosure and other requests.
+          </li>
           <li>
             2026-09-26: Removed descriptions of the discontinued comment, reaction, and image-attachment
             features. Revised the descriptions of purchase information and notifications from Apple, push
@@ -362,7 +402,7 @@
           <li>2026-07-27: Initial publication.</li>
         </ul>
       </footer>
-      <footer class="bottom">© FutariSeikatsu / mon50</footer>
+      <footer class="bottom">© FutariSeikatsu / Sota Sugiyama</footer>
     </main>
   </body>
 </html>
