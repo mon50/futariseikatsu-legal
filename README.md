@@ -13,6 +13,7 @@ GitHub Pages で公開するための静的サイト。
 | プライバシーポリシー | `/legal/privacy/ja/` | `/legal/privacy/en/` |
 | 利用規約 | `/legal/terms/ja/` | `/legal/terms/en/` |
 | 特定商取引法に基づく表記 | `/legal/tokushoho/ja/` | `/legal/tokushoho/en/` |
+| サポート（App Store Connect のサポート URL） | `/legal/support/ja/` | `/legal/support/en/` |
 
 App Store Connect / アプリ内の設定画面からは、上記のフル URL
 （例: `https://mon50.github.io/futariseikatsu-legal/legal/privacy/ja/`）を参照する。
@@ -22,7 +23,7 @@ App Store Connect / アプリ内の設定画面からは、上記のフル URL
 ```
 index.html                     各ページへのリンク集
 legal/shared/style.css         全ページ共通スタイル
-legal/<doc>/<lang>/index.html  各文書（doc: privacy | terms | tokushoho, lang: ja | en）
+legal/<doc>/<lang>/index.html  各文書（doc: privacy | terms | tokushoho | support, lang: ja | en）
 .nojekyll                      GitHub Pages の Jekyll 処理を無効化
 ```
 
